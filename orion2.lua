@@ -433,7 +433,6 @@ function OrionLib:MakeNotification(NotificationConfig)
 end    
 
 function OrionLib:Init()
-	if OrionLib.SaveCfg then	
 		pcall(function()
 			if isfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt") then
 				LoadCfg(readfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt"))
@@ -444,7 +443,6 @@ function OrionLib:Init()
 				})
 			end
 		end)		
-	end	
 end	
 
 function OrionLib:MakeWindow(WindowConfig)
